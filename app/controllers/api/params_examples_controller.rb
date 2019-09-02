@@ -5,4 +5,11 @@ class Api::ParamsExamplesController < ApplicationController
     @message_2 = params["other_message"]
     render 'query_params_view.json.jb'
   end
+
+  def body_params
+    @message = params[:ham]
+
+    render 'body_params_view.json.jb'
+
+  end
 end
